@@ -6,13 +6,14 @@
     background-image: url(Donkeremuur1cropped.png);
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
 }
 
 .grid-container{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 20px;
-    max-width: 1235px;
+    width: 1000px;
 }
 
 div img{

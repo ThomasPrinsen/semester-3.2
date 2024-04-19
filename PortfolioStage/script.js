@@ -50,3 +50,7 @@ document.addEventListener("DOMContentLoaded", function() {
         overlay.style.display = 'block';
     });
 });
+
+function openDocument() {
+    window.open('https://docs.google.com/document/d/1fge4uNChjwpjBGMQbq1iLkpe__Vsk3Us-KjgAAah7p4/edit?usp=sharing');
+}

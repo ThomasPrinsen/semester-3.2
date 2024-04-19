@@ -9,10 +9,8 @@ body, html {
   background-size: cover; 
   background-position: center; 
   height: 100%;
-  font-family: 'Titillium Web';
-  text-transform: uppercase;
+  font-family: monospace;
   text-align: right;
-  font-weight: 600; 
 }
 
 .prikbord * {
@@ -24,6 +22,7 @@ body, html {
   display: inline-block;
   margin: 20px -10px;
   margin-right: 20px;
+  font-family: monospace;
 }
 
 .prikbord a {

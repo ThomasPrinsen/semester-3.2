@@ -1,0 +1,71 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    }
+    
+  .prikbord {
+    background-image: url(Prikbord2logo.png);
+    background-size: cover; 
+    background-position: center; 
+    height: 100%;
+    font-family: monospace;
+    text-align: right;
+  }
+  
+  .prikbord * {
+    box-sizing: border-box;
+    transition: all .35s ease;
+  }
+  
+  .prikbord a {
+    display: inline-block;
+    margin: 20px -10px;
+    margin-right: 20px;
+    font-family: monospace;
+  }
+  
+  .prikbord a {
+    padding: .5em .8em;
+    color: #fff;
+    position: relative;
+    text-decoration: none;
+    font-size: 20px;
+  }
+  
+  .prikbord a::before,
+  .prikbord a::after {
+    content: '';
+    height: 14px;
+    width: 14px;
+    position: absolute;
+    transition: all .35s ease;
+    opacity: 0;
+  }
+  
+  .prikbord a::before {
+    content: '';
+    right: 0;
+    top: 0;
+    border-top: 3px solid #eb0a0a;
+    border-right: 3px solid #9a1111;
+    transform: translate(-100%, 50%);
+  }
+  
+  .prikbord a:after {
+    content: '';
+    left: 0;
+    bottom: 0;
+    border-bottom: 3px solid #9a1111;
+    border-left: 3px solid #eb0a0a;
+    transform: translate(100%, -50%)
+  }
+  
+  .prikbord a:hover:before, .prikbord a:hover:after{
+    transform: translate(0,0);
+    opacity: 1;
+  }
+  
+  .prikbord a:hover {
+    color: #eb0a0a;
+  }

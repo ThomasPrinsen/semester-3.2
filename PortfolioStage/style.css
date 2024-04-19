@@ -122,13 +122,15 @@
 .btn-projecten{
     position: fixed;
     top: 20px;
-    right: 160px;
+    right: 140px;
     height: 20px;
     z-index: 4;
     padding: 10px 20px;
     border-radius: 5px;
     text-decoration: none;
     color: #fff;
+    font-family: monospace;
+    font-size: 16px;
     display: none;
 }
 
@@ -142,72 +144,43 @@
     border-radius: 5px;
     text-decoration: none;
     color: #fff;
+    font-family: monospace;
+    font-size: 16px;
     display: none;
 }
-
-.btn-projecten:hover, .btn-overmij:hover{
-    color: #f00;
-}
-
-/* .container2 {
-    font-family: 'Titillium Web';
-    text-transform: uppercase;
-    text-align: right;
-    font-weight: 600;
-  }
   
-  .container2 * {
-    box-sizing: border-box;
-    transition: all .35s ease;
-  }
-  
-  .container2 a {
-    display: inline-block;
-    margin: 20px -10px;
-    margin-right: 20px;
-  }
-  
-  .container2 a {
-    padding: .5em .8em;
-    color: #fff;
-    position: relative;
-    text-decoration: none;
-    font-size: 20px;
-  }
-  
-  .container2 a::before,
-  .container2 a::after {
+.container2 a::before, .container2 a::after {
     content: '';
     height: 14px;
     width: 14px;
     position: absolute;
     transition: all .35s ease;
     opacity: 0;
-  }
+}
   
-  .container2 a::before {
+.container2 a::before {
     content: '';
     right: 0;
     top: 0;
     border-top: 3px solid #eb0a0a;
     border-right: 3px solid #9a1111;
     transform: translate(-100%, 50%);
-  }
+}
   
-  .container2 a:after {
+.container2 a:after {
     content: '';
     left: 0;
     bottom: 0;
     border-bottom: 3px solid #9a1111;
     border-left: 3px solid #eb0a0a;
     transform: translate(100%, -50%)
-  }
+}
   
-  .container2 a:hover:before, .container2 a:hover:after{
+.container2 a:hover:before, .container2 a:hover:after{
     transform: translate(0,0);
     opacity: 1;
-  }
+}
   
-  .container2 a:hover {
+.container2 a:hover {
     color: #eb0a0a;
-  } */
+}
