@@ -1,22 +1,87 @@
-*{
+* {
     margin: 0;
 }
 
-.donkeremuur{
-    background-image: url(Donkeremuur1cropped.png);
+body {
+    background-image: url('Donkeremuur2.jpg');
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative; /* Maakt het mogelijk om de prikbord-div absoluut te positioneren */
 }
 
-.grid-container{
+.grid-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 20px;
-    width: 1000px;
+    max-width: 1000px;
 }
 
-div img{
+.fotolijst1 img {
     width: 100%;
-    padding-left: 200px;
+}
+
+.prikbord {
+    position: absolute; /* Maakt de div absoluut gepositioneerd */
+    top: 20px; /* Afstand vanaf de bovenkant van het viewport */
+    right: 20px; /* Afstand vanaf de rechterkant van het viewport */
+}
+
+.prikbord * {
+    box-sizing: border-box;
+    transition: all .35s ease;
+}
+
+.prikbord a {
+    display: inline-block;
+    margin: 0 10px; /* Aangepast om de marges te verminderen */
+    font-family: monospace;
+}
+
+.prikbord a {
+    padding: .5em .8em;
+    color: #fff;
+    position: relative;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.prikbord a::before,
+.prikbord a::after {
+    content: '';
+    height: 14px;
+    width: 14px;
+    position: absolute;
+    transition: all .35s ease;
+    opacity: 0;
+}
+
+.prikbord a::before {
+    content: '';
+    right: 0;
+    top: 0;
+    border-top: 3px solid #eb0a0a;
+    border-right: 3px solid #9a1111;
+    transform: translate(-100%, 50%);
+}
+
+.prikbord a:after {
+    content: '';
+    left: 0;
+    bottom: 0;
+    border-bottom: 3px solid #9a1111;
+    border-left: 3px solid #eb0a0a;
+    transform: translate(100%, -50%)
+}
+
+.prikbord a:hover:before, .prikbord a:hover:after{
+    transform: translate(0,0);
+    opacity: 1;
+}
+
+.prikbord a:hover {
+    color: #eb0a0a;
 }
