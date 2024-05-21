@@ -1,1 +1,1 @@
-Ik heb van de kaart een component gemaakt, zodat deze makkelijk toegevoegd kan worden aan de samengevoegde website
+Ik heb van de kaart een component gemaakt, zodat deze makkelijk toegevoegd kan worden aan de samengevoegde website. Als het goed is werkt het nu!
