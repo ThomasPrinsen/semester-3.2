@@ -8,49 +8,54 @@
       ></div>
       <div class="TextContainer">
         <div class="TextRectangle">
-        <p class="BigText">Roze handboekje <br> gelezen</p>
-        <p>Datum: 07-07-2024</p>
+            <p class="BigText" v-html="progressText"></p>
+            <p>Datum: 07-07-2024</p>
         </div>
       </div>
       <input type="range" value="25" min="0" max="100" />
     </div>
 </template>
   
-  <script setup>
-    import { onMounted } from 'vue';
-  
+<script setup>
+    import { onMounted, ref } from 'vue';
+
+    const progressText = ref('Roze handboekje<br>gelezen');
+
     onMounted(() => {
-      const controller = document.querySelector('input[type=range]');
-      const radialProgress = document.querySelector('.RadialProgress');
-  
-      // Functie om het percentage op te slaan in de localStorage
-      const saveProgress = (progress) => {
-        localStorage.setItem('lastProgress', progress);
-      }
-  
-      // Functie om het opgeslagen percentage op te halen uit de localStorage
-      const getLastProgress = () => {
-        return localStorage.getItem('lastProgress') || '0'; // Als er geen opgeslagen percentage is, standaard naar 0 gaan
-      }
-  
-      // Functie om de voortgang in te stellen en op te slaan
-      const setProgress = (progress) => {
+    const controllers = document.querySelectorAll('input[type=range]');
+    const radialProgresses = document.querySelectorAll('.RadialProgress');
+
+    // Functie om het percentage op te slaan in de localStorage
+    const saveProgress = (index, progress) => {
+        localStorage.setItem(`lastProgress${index}`, progress);
+    }
+
+    // Functie om het opgeslagen percentage op te halen uit de localStorage
+    const getLastProgress = (index) => {
+        return localStorage.getItem(`lastProgress${index}`) || '0'; // Als er geen opgeslagen percentage is, standaard naar 0 gaan
+    }
+
+    // Functie om de voortgang in te stellen en op te slaan
+    const setProgress = (index, progress) => {
         const value = `${progress}%`;
-        radialProgress.style.setProperty('--progress', value);
-        radialProgress.setAttribute('aria-valuenow', value);
-        controller.value = progress; // Stel ook de waarde van de input-range in
-        saveProgress(progress); // Sla de progressie op in localStorage
-      }
-  
-      // Haal het laatst opgeslagen percentage op en stel het in
-      setProgress(getLastProgress());
-  
-      // Wanneer de gebruiker de input-range wijzigt, werk de voortgang bij en sla het op
-      controller.oninput = () => {
-        setProgress(controller.value);
-      }
+        radialProgresses[index].style.setProperty('--progress', value);
+        radialProgresses[index].setAttribute('aria-valuenow', value);
+        controllers[index].value = progress; // Stel ook de waarde van de input-range in
+        saveProgress(index, progress); // Sla de progressie op in localStorage
+    }
+
+    // Itereer over alle controllers en radialProgresses
+    controllers.forEach((controller, index) => {
+        // Haal het laatst opgeslagen percentage op en stel het in
+        setProgress(index, getLastProgress(index));
+
+        // Wanneer de gebruiker de input-range wijzigt, werk de voortgang bij en sla het op
+        controller.oninput = () => {
+        setProgress(index, controller.value);
+        }
     });
-  </script>
+    });
+</script>
   
   <style scoped>
     .RadialProgressContainer {
@@ -86,9 +91,9 @@
         border-radius: 50%;
         z-index: -1;
         background: conic-gradient(
-          hsl(var(--hue) 100% 70%),
+          hsl(var(--hue) 100% 50%),
           hsl(var(--hue) 100% 40%),
-          hsl(var(--hue) 100% 70%) var(--progress, 0%),
+          hsl(var(--hue) 100% 50%) var(--progress, 0%),
           var(--track-bg) var(--progress, 0%) 100%
         );
         
@@ -127,6 +132,10 @@
         position: relative;
         top: -100px;
         z-index: 0;
+        max-width: 200px;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        text-align: center;
     }
 
     .TextRectangle::before{
