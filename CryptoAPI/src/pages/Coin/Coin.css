@@ -53,6 +53,7 @@
     margin: 200px auto;
     display: flex;
     flex-direction: column;
+    margin-top: 250px;
 }
 
 .coin-info ul{
@@ -66,3 +67,33 @@
 .coin-info ul li:last-child{
     font-weight: 300;
 }
+
+.chart-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+  
+.chart-button {
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    color: #333;
+    cursor: pointer;
+    margin: 0 5px;
+    padding: 10px 15px;
+    transition: background-color 0.3s;
+}
+  
+.chart-button.active {
+    background-color: #4500c6;
+    color: white;
+    border-color: #4500c6;
+}
+  
+.chart-button:hover {
+    background-color: #4500c6;
+    color: white;
+    border-color: #4500c6;
+}
+  

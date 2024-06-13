@@ -116,3 +116,18 @@
         width: 100px;
     }
 }
+
+.sortable-header {
+    cursor: pointer;
+    /* display: flex; */
+    align-items: center;
+  }
+  
+.sortable-header img {
+    margin-left: 5px;
+    max-width: 8px;
+}
+
+.sortable-header img.rotated {
+    transform: rotate(180deg);
+}
