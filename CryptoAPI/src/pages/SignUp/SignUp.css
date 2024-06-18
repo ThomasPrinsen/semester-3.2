@@ -1,59 +1,64 @@
 .sign-up {
-    padding: 40px 20px;
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: center;
-    background-color: transparent;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-top: 50px;
-    margin-bottom: 50px;
-  }
-  
-  .sign-up h2 {
-    font-size: 2.5em;
-    margin-bottom: 40px;
-    color: #e3e3e3;
-  }
-  
-  .sign-up form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin-bottom: 20px;
-  }
-  
-  .sign-up input[type="email"],
-  .sign-up input[type="password"] {
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    outline: none;
-  }
-  
-  .sign-up input[type="email"]:focus,
-  .sign-up input[type="password"]:focus {
-    border-color: #7927ff;
-  }
-  
-  .sign-up button {
-    border: none;
-    background: #7927ff;
-    color: white;
-    font-size: 16px;
-    padding: 12px 30px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  .sign-up button:hover {
-    background-color: #4500c6;
-  }
-  
-  .sign-up p {
-    color: #555;
-    margin: 10px 0;
-  }
-  
+  padding: 40px 20px;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  background-color: transparent;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.sign-up h2 {
+  font-size: 2.5em;
+  margin-bottom: 40px;
+  color: #e3e3e3;
+}
+
+.sign-up form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.sign-up .input-group {
+  display: flex;
+  gap: 10px;
+}
+
+.sign-up input[type="email"],
+.sign-up input[type="password"] {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+}
+
+.sign-up input[type="email"]:focus,
+.sign-up input[type="password"]:focus {
+  border-color: #7927ff;
+}
+
+.sign-up button {
+  padding: 10px 20px;
+  font-size: 14px;
+  border: none;
+  background: #7927ff;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.sign-up button:hover {
+  background-color: #4500c6;
+}
+
+.sign-up p {
+  color: #555;
+  margin: 10px 0;
+}

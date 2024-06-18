@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth';
-import { auth } from '../../firebase'; // Importeer de auth module uit je firebase.js
+import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth';
+import { auth } from '../../firebase';
 import './SignUp.css';
 
 const SignUp = () => {
@@ -32,7 +32,7 @@ const SignUp = () => {
 
   return (
     <div className="sign-up">
-      <h2>Sign Up or Log In</h2>
+      <h2>Sign Up</h2>
       <form onSubmit={handleSignUp}>
         <input
           type="email"
@@ -41,16 +41,19 @@ const SignUp = () => {
           placeholder="Email"
           required
         />
-        <input
-          type="password"
-          value={signUpPassword}
-          onChange={(e) => setSignUpPassword(e.target.value)}
-          placeholder="Password"
-          required
-        />
-        <button type="submit">Sign Up</button>
+        <div className="input-group">
+          <input
+            type="password"
+            value={signUpPassword}
+            onChange={(e) => setSignUpPassword(e.target.value)}
+            placeholder="Password"
+            required
+          />
+          <button type="submit">Sign Up</button>
+        </div>
       </form>
 
+      <h2>Log In</h2>
       <form onSubmit={handleSignIn}>
         <input
           type="email"
@@ -59,14 +62,16 @@ const SignUp = () => {
           placeholder="Email"
           required
         />
-        <input
-          type="password"
-          value={loginPassword}
-          onChange={(e) => setLoginPassword(e.target.value)}
-          placeholder="Password"
-          required
-        />
-        <button type="submit">Log In</button>
+        <div className="input-group">
+          <input
+            type="password"
+            value={loginPassword}
+            onChange={(e) => setLoginPassword(e.target.value)}
+            placeholder="Password"
+            required
+          />
+          <button type="submit">Log In</button>
+        </div>
       </form>
 
       {message && <p>{message}</p>}
