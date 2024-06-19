@@ -22,22 +22,23 @@ Om CryptoChecker lokaal te installeren en uit te voeren, volg je deze stappen:
    ```bash
    git clone <repository-url>
    cd CryptoChecker
-Noodzakelijke pakketten installeren
 
-bash
-Code kopiëren
-npm install
-Configureren
+3. **Noodzakelijke pakketten installeren**
+
+    npm install
+
+4. **Configureren**
 
 Maak een .env-bestand aan in de hoofdmap van het project en voeg je CoinGecko API-sleutel en Firebase-configuratie toe.
 
-Applicatie starten
+5. **Applicatie starten**
 
-bash
-Code kopiëren
-npm start
-Licentie
+    npm start
+
+## Licentie
+
 Dit project is gelicentieerd onder de MIT-licentie. Zie het LICENSE bestand voor meer informatie.
 
-Contact
+## Contact
+
 Voor vragen of ondersteuning kun je contact met me opnemen via e-mail: 488230@student.fontys.nl
