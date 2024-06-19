@@ -64,8 +64,8 @@ const Navbar = ({ currentUser }) => {
         </select>
         {currentUser ? (
           <div className="user-controls">
-            <span className="user-info">Signed in as: {currentUser.email}</span>
             <button onClick={handleSignOut} className="sign-out-button">Log Out <img src={arrow_icon} alt="Arrow icon" /></button>
+            <span className="user-info">Signed in as: {currentUser.email}</span>
           </div>
         ) : (
           <button onClick={handleSignUpClick}>Sign up / Log in <img src={arrow_icon} alt="Arrow icon" /></button>
