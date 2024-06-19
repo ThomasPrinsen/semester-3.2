@@ -1,24 +1,27 @@
-CryptoChecker
+# CryptoChecker
+
 CryptoChecker is een crypto API gemaakt met de API van CoinGecko. Met CryptoChecker kun je de top 100 meest waardevolle cryptomunten vinden met gedetailleerde informatie. Daarnaast biedt de applicatie het laatste nieuws over crypto. Gebruikers kunnen ook inloggen met hun eigen account door middel van Firebase-authenticatie.
 
-Functies
-Overzicht van de top 100 meest waardevolle cryptomunten
-Gedetailleerde informatie per cryptomunt
-Laatste nieuws over crypto
-Inloggen met een eigen account via Firebase-authenticatie
-Installatie
+## Functies
+
+- Overzicht van de top 100 meest waardevolle cryptomunten
+- Gedetailleerde informatie per cryptomunt
+- Laatste nieuws over crypto
+- Inloggen met een eigen account via Firebase-authenticatie
+
+## Installatie
+
 Om CryptoChecker lokaal te installeren en uit te voeren, volg je deze stappen:
 
-Node.js en npm installeren
+1. **Node.js en npm installeren**
 
-Zorg ervoor dat je Node.js en npm hebt geïnstalleerd.
+   Zorg ervoor dat je [Node.js](https://nodejs.org/) en [npm](https://www.npmjs.com/) hebt geïnstalleerd.
 
-Repository klonen
+2. **Repository klonen**
 
-bash
-Code kopiëren
-git clone <repository-url>
-cd CryptoChecker
+   ```bash
+   git clone <repository-url>
+   cd CryptoChecker
 Noodzakelijke pakketten installeren
 
 bash
