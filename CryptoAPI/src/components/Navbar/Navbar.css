@@ -1,86 +1,55 @@
+/* src/components/Navbar/Navbar.css */
+
 .navbar {
+    background-color: #333;
+    padding: 10px 20px;
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    padding: 20px 10%;
-    color: #ddd;
-    border-bottom: 2px solid #3c3c3c;
-}
-
-.navbar .logo {
-    width: max(12vw, 120px);
-}
-
-.navbar ul {
+    align-items: center;
+  }
+  
+  .logo {
+    height: 40px;
+  }
+  
+  ul {
     display: flex;
-    gap: 40px;
     list-style: none;
-    flex-grow: 1;
-    justify-content: center;
-}
-
-.navbar li {
-    cursor: pointer;
-}
-
-.nav-right {
-    display: flex;
-    align-items: center;
-    gap: max(1vw, 12px);
-}
-
-.navbar select {
-    padding: 5px 8px;
-    border-radius: 6px;
-    border: 2px solid white;
-    background: transparent;
+  }
+  
+  ul li {
+    margin: 0 15px;
     color: white;
-}
-
-.navbar option {
-    background-color: #09005c;
+    cursor: pointer;
+  }
+  
+  ul li a {
     color: white;
-}
-
-.navbar button {
+    text-decoration: none;
+  }
+  
+  .nav-right {
     display: flex;
     align-items: center;
-    gap: 10px;
-    padding: 10px 25px;
-    border-radius: 20px;
-    font-size: 15px;
-    font-weight: 500;
-    color: #393939;
-    background: white;
-    border: none;
-    cursor: pointer;
-}
-
-.navbar button img {
-    width: 13px;
-}
-
-.user-controls {
+  }
+  
+  .nav-right select,
+  .nav-right button {
+    margin-left: 10px;
+    padding: 5px 10px;
+  }
+  
+  .user-controls {
     display: flex;
     align-items: center;
-    gap: 10px;
-}
-
-.user-info {
-    font-size: 14px;
-    color: #ddd;
-}
-
-.sign-out-button {
-    padding: 8px 16px;
-    border-radius: 20px;
-    font-size: 14px;
-    font-weight: 500;
-    color: #393939;
-    background: white;
-    border: none;
-    cursor: pointer;
-}
+  }
+  
+  .sign-out-button,
+  .user-info {
+    margin-left: 10px;
+    color: white;
+  }
+  
 
 @media (max-width: 900px) {
     .navbar {

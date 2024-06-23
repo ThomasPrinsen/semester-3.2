@@ -11,50 +11,55 @@ const Navbar = ({ currentUser }) => {
   const navigate = useNavigate();
   const auth = getAuth();
 
-  // Functie om valuta te wijzigen op basis van geselecteerde optie in dropdown
   const currencyHandler = (event) => {
     switch (event.target.value) {
-      case "usd":
-        setCurrency({ name: "usd", symbol: "$" });
+      case 'usd':
+        setCurrency({ name: 'usd', symbol: '$' });
         break;
-      case "eur":
-        setCurrency({ name: "eur", symbol: "€" });
+      case 'eur':
+        setCurrency({ name: 'eur', symbol: '€' });
         break;
-      case "inr":
-        setCurrency({ name: "inr", symbol: "₹" });
+      case 'inr':
+        setCurrency({ name: 'inr', symbol: '₹' });
         break;
       default:
-        setCurrency({ name: "usd", symbol: "$" });
+        setCurrency({ name: 'usd', symbol: '$' });
         break;
     }
   };
 
-  // Functie om naar de signup pagina te navigeren
   const handleSignUpClick = () => {
     navigate('/signup');
   };
 
-  // Functie om uit te loggen
   const handleSignOut = () => {
     signOut(auth)
       .then(() => {
         navigate('/');
       })
       .catch((error) => {
-        console.error("Error signing out: ", error);
+        console.error('Error signing out: ', error);
       });
   };
 
   return (
     <div className='navbar'>
-      <Link to={'/'}>
-        <img src={logo} alt="Logo" className='logo' />
+      <Link to="/">
+        <img src={logo} alt="Logo" className="logo" />
       </Link>
       <ul>
-        <Link to={'/'}><li>Home</li></Link>
-        <Link to='/news'><li>News</li></Link>
-        <li>Tips & Tricks</li>
-        <li>About Us</li>
+        <li>
+          <Link to="/">Home</Link>
+        </li>
+        <li>
+          <Link to="/news">News</Link>
+        </li>
+        <li>
+          <Link to="/tips-tricks">Tips & Tricks</Link>
+        </li>
+        <li>
+          <Link to="/about-us">About Us</Link>
+        </li>
       </ul>
       <div className="nav-right">
         <select onChange={currencyHandler}>
@@ -64,15 +69,19 @@ const Navbar = ({ currentUser }) => {
         </select>
         {currentUser ? (
           <div className="user-controls">
-            <button onClick={handleSignOut} className="sign-out-button">Log Out <img src={arrow_icon} alt="Arrow icon" /></button>
+            <button onClick={handleSignOut} className="sign-out-button">
+              Log Out <img src={arrow_icon} alt="Arrow icon" />
+            </button>
             <span className="user-info">Signed in as: {currentUser.email}</span>
           </div>
         ) : (
-          <button onClick={handleSignUpClick}>Sign up / Log in <img src={arrow_icon} alt="Arrow icon" /></button>
+          <button onClick={handleSignUpClick}>
+            Sign up / Log in <img src={arrow_icon} alt="Arrow icon" />
+          </button>
         )}
       </div>
     </div>
   );
-}
+};
 
 export default Navbar;
