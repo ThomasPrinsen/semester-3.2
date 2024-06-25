@@ -2,7 +2,7 @@ import { createContext, useEffect, useState } from "react";
 
 export const CoinContext = createContext(); // Maakt een nieuw context object aan
 
-const CoinContextProvider = (props) => {
+const CoinProvider = (props) => {
     const [allCoin, setAllCoin] = useState([]); // State voor alle cryptocurrency gegevens
     const [currency, setCurrency] = useState({ // State voor de valuta instellingen
         name: "usd", // Valuta naam (standaard USD)
@@ -36,9 +36,9 @@ const CoinContextProvider = (props) => {
 
     return (
         <CoinContext.Provider value={contextValue}>
-            {props.children} {/* Render de kindercomponenten van CoinContextProvider */}
+            {props.children} {/* Render de kindercomponenten van CoinProvider */}
         </CoinContext.Provider>
     )
 }
 
-export default CoinContextProvider; // Exporteer de CoinContextProvider component
+export default CoinProvider; // Exporteer de CoinProvider component

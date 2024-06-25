@@ -1,75 +1,127 @@
-/* src/components/Navbar/Navbar.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
 
 .navbar {
-    background-color: #333;
-    padding: 10px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .logo {
-    height: 40px;
-  }
-  
-  ul {
-    display: flex;
-    list-style: none;
-  }
-  
-  ul li {
-    margin: 0 15px;
-    color: white;
-    cursor: pointer;
-  }
-  
-  ul li a {
-    color: white;
-    text-decoration: none;
-  }
-  
-  .nav-right {
-    display: flex;
-    align-items: center;
-  }
-  
-  .nav-right select,
-  .nav-right button {
-    margin-left: 10px;
-    padding: 5px 10px;
-  }
-  
-  .user-controls {
-    display: flex;
-    align-items: center;
-  }
-  
-  .sign-out-button,
-  .user-info {
-    margin-left: 10px;
-    color: white;
-  }
-  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background: linear-gradient(rgba(84,3,255,0.15),rgba(105,2,153,0.15));
+  border-radius: 15px;
+  max-width: 1000px;
+  margin: 20px auto 0;
+  margin-top: 0px;
+}
 
-@media (max-width: 900px) {
-    .navbar {
-        padding: 20px 8%;
-    }
-    .navbar button {
-        gap: 8px;
-        padding: 8px 18px;
-        font-size: 14px;
-    }
+.logo {
+  width: 120px;
+}
+
+.navbar ul {
+  display: flex;
+  list-style-type: none;
+  gap: 20px;
+}
+
+.navbar ul li {
+  font-size: 16px;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+.navbar ul li a:hover {
+  color: #7927ff;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav-right select {
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  background-color: white;
+  color: #7927ff;
+  font-size: 16px;
+}
+
+.nav-right button {
+  border: none;
+  background: #7927ff;
+  color: white;
+  font-size: 16px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.nav-right button img {
+  width: 16px;
+}
+
+.user-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.user-controls .sign-out-button {
+  background: #ff4646;
+}
+
+.user-info {
+  color: white;
+  font-size: 14px;
 }
 
 @media (max-width: 770px) {
-    .navbar {
-        padding: 20px 5%;
-    }
-    .navbar ul {
-        display: none;
-    }
-    .navbar button img {
-        width: 12px;
-    }
+  .navbar ul {
+    display: none;
+  }
+
+  .navbar ul li {
+    font-size: 14px;
+  }
+
+  .navbar {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 500px) {
+  .nav-right select {
+    font-size: 14px;
+  }
+
+  .nav-right button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  .nav-right button img {
+    width: 12px;
+  }
+
+  .user-info {
+    font-size: 12px;
+  }
 }
