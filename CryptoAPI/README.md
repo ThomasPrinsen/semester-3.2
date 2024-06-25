@@ -23,6 +23,8 @@ CryptoChecker is een crypto API gemaakt met de API van CoinGecko. Met CryptoChec
 - **JavaScript** ![JavaScript](https://img.shields.io/badge/-JavaScript-F7DF1E?logo=javascript&logoColor=black&style=flat-square)
 - **CoinGecko API** ![CoinGecko](https://img.shields.io/badge/-CoinGecko-000000?logo=coingecko&logoColor=white&style=flat-square)
 - **Firebase** ![Firebase](https://img.shields.io/badge/-Firebase-FFCA28?logo=firebase&logoColor=black&style=flat-square)
+- **HTML** ![HTML](https://img.shields.io/badge/-HTML-E34F26?logo=html5&logoColor=white&style=flat-square)
+- **CSS** ![CSS](https://img.shields.io/badge/-CSS-1572B6?logo=css3&logoColor=white&style=flat-square)
 
 
 ## Installatie
