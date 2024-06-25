@@ -9,6 +9,13 @@ CryptoChecker is een crypto API gemaakt met de API van CoinGecko. Met CryptoChec
 - Laatste nieuws over crypto
 - Inloggen met een eigen account via Firebase-authenticatie
 
+## Functies voor de toekomst
+
+- Een Tips & Tricks pagina gevuld met tips die het handelen in crypto gemakkelijker maken
+- Een About Us pagina, waarin ik vertel over mijn bedrijf CryptoChecker
+- Een manier om zelf ook munten te kunnen verandelen via deze website met je account
+- Het gebruiken van 2FA, om uw account beter beveiligd te houden
+
 ## Gebruikte Technologieën
 
 - **React** ![React](https://img.shields.io/badge/-React-61DAFB?logo=react&logoColor=white&style=flat-square)
